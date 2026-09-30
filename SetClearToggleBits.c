@@ -32,9 +32,8 @@ uint32_t toggleb(uint32_t x, uint8_t bit_pos)
 
 int main()
 {  	
-    volatile uint32_t reg_address = 0x00000000;
-    uint32_t *ptr = reg_address;
-    uint32_t x = &ptr;
+    uint32_t x = 0x00000000;
+    volatile uint32_t *ptr = &x;
     
     x = setb(x, 0);
  	x = clearb(x, 1);
